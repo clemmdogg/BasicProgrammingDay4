@@ -160,6 +160,7 @@ namespace BasicProgrammingDay4.Exercises
             }
             Console.WriteLine();
             Console.WriteLine();
+            Console.Write("Hemmeligt ord: ");
             for (int i = 0; i < secretWord.Length; i++)
             {
                 if (lettersGuessed.Contains(secretWord[i]))
