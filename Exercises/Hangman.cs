@@ -31,10 +31,13 @@ namespace BasicProgrammingDay4.Exercises
 
             while (!isSecretWordUseableForProgram)
             {
+                Console.Clear();
                 Console.Write("Til game master: Vælg et hemmeligt ord: ");
                 secretWord = Console.ReadLine().ToLower();
                 if (string.IsNullOrEmpty(secretWord))
                 {
+                    Console.WriteLine("Det skal være et rigtigt ord!!");
+                    Console.ReadKey();
                     continue;
                 }
                 isSecretWordUseableForProgram = isSecretWordUseable(secretWord);
@@ -49,6 +52,8 @@ namespace BasicProgrammingDay4.Exercises
                 if (!possibleLetters.Contains(letter))
                 {
                     isSecretWordUseable = false;
+                    Console.WriteLine("Det skal være et rigtigt ord!!");
+                    Console.ReadKey();
                     break;
                 }
             }
@@ -99,6 +104,8 @@ namespace BasicProgrammingDay4.Exercises
                     {
                         break;
                     }
+                    Console.WriteLine("Det var desværre forkert. Prøv igen!!");
+                    Console.ReadKey();
                     numberOfGuessesLeft--;
                 }
 
